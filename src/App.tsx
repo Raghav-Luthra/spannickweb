@@ -87,7 +87,7 @@ function App() {
               </h2>
               <p className="text-gray-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                 Premium custom-stitched wedding sherwanis, bespoke formal suits, and designer ethnic wear for men.
-                Rajasthan's finest fashion designers since 1994, serving Jaipur, Udaipur, Jodhpur, Delhi, and beyond.
+                Rajasthan's finest fashion designers since 1994, serving Jaipur.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://spannickbyluthras.vercel.app" target="_blank" rel="noopener noreferrer">
