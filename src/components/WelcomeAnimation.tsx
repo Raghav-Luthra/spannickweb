@@ -53,15 +53,16 @@ export default function WelcomeAnimation({ onComplete }: WelcomeAnimationProps) 
             <span className="welcome-letter text-white" style={{ animationDelay: '0.6s' }}>N</span>
             <span className="welcome-letter text-white" style={{ animationDelay: '0.7s' }}>I</span>
             <span className="welcome-letter text-white" style={{ animationDelay: '0.8s' }}>C</span>
-            <span className="welcome-letter text-gold block mt-4" style={{ animationDelay: '0.9s' }}>D</span>
-            <span className="welcome-letter text-gold" style={{ animationDelay: '1.0s' }}>E</span>
-            <span className="welcome-letter text-gold" style={{ animationDelay: '1.1s' }}>S</span>
-            <span className="welcome-letter text-gold" style={{ animationDelay: '1.2s' }}>I</span>
-            <span className="welcome-letter text-gold" style={{ animationDelay: '1.3s' }}>G</span>
-            <span className="welcome-letter text-gold" style={{ animationDelay: '1.4s' }}>N</span>
-            <span className="welcome-letter text-gold" style={{ animationDelay: '1.5s' }}>E</span>
-            <span className="welcome-letter text-gold" style={{ animationDelay: '1.6s' }}>R</span>
-            <span className="welcome-letter text-gold" style={{ animationDelay: '1.7s' }}>S</span>
+            <span className="welcome-letter text-white" style={{ animationDelay: '0.9s' }}>K</span>
+            <span className="welcome-letter text-gold block mt-4" style={{ animationDelay: '1.0s' }}>D</span>
+            <span className="welcome-letter text-gold" style={{ animationDelay: '1.1s' }}>E</span>
+            <span className="welcome-letter text-gold" style={{ animationDelay: '1.2s' }}>S</span>
+            <span className="welcome-letter text-gold" style={{ animationDelay: '1.3s' }}>I</span>
+            <span className="welcome-letter text-gold" style={{ animationDelay: '1.4s' }}>G</span>
+            <span className="welcome-letter text-gold" style={{ animationDelay: '1.5s' }}>N</span>
+            <span className="welcome-letter text-gold" style={{ animationDelay: '1.6s' }}>E</span>
+            <span className="welcome-letter text-gold" style={{ animationDelay: '1.7s' }}>R</span>
+            <span className="welcome-letter text-gold" style={{ animationDelay: '1.8s' }}>S</span>
           </h1>
 
           <div className="welcome-tagline">
