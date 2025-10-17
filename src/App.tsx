@@ -83,7 +83,7 @@ function App() {
               </div>
               <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif mb-6 leading-tight glow-text-white">
                 Best Men's Wedding Wear
-                <span className="block text-gold glow-text-gold mt-2">Tailors in Rajasthan</span>
+                <span className="block text-gold glow-text-gold mt-2">Fashion Designers in Rajasthan</span>
               </h2>
               <p className="text-gray-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                 Premium custom-stitched wedding sherwanis, bespoke formal suits, and designer ethnic wear for men.
