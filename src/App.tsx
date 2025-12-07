@@ -111,7 +111,7 @@ function App() {
         </div>
       </section>
 
-      {/* ...rest of the file unchanged... */
+      {/* ...rest of the file unchanged... */}
     </div>
   );
 }
