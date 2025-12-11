@@ -291,8 +291,7 @@ function App() {
                 <Phone className="text-gold" size={24} />
               </div>
               <h4 className="text-xl font-serif mb-2">Call Us</h4>
-              <p className="text-gray-400">+91 98765 43210</p>
-              <p className="text-gray-400">+91 98765 43211</p>
+              <p className="text-gray-400">+91 99295 73000</p>
             </div>
 
             <div className="contact-card group">
@@ -300,8 +299,8 @@ function App() {
                 <Mail className="text-gold" size={24} />
               </div>
               <h4 className="text-xl font-serif mb-2">Email Us</h4>
-              <p className="text-gray-400">info@spannickdesigners.com</p>
-              <p className="text-gray-400">appointments@spannick.com</p>
+              <p className="text-gray-400">spannickdesigners@gmail.com</p>
+              <p className="text-gray-400">raghavluthra555@gmail.com</p>
             </div>
 
             <div className="contact-card group">
