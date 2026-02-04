@@ -28,10 +28,12 @@ function App() {
     return <AboutUs />;
   }
 
+  const headerClass = `fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-black/95 backdrop-blur-md shadow-2xl' : 'bg-transparent'}`;
+
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <FloatingOrbs />
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-black/95 backdrop-blur-md shadow-2xl' : 'bg-transparent'}`}>
+      <header className={headerClass}>
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="logo-fade-in">
@@ -61,7 +63,7 @@ function App() {
           </div>
         </nav>
 
-        <div className={`lg:hidden mobile-menu ${isMenuOpen ? 'mobile-menu-open' : ''}`}>
+        <div className={`lg:hidden mobile-menu ${isMenuOpen ? 'mobile-menu-open' : ''}`}> 
           <div className="flex flex-col space-y-6 p-6">
             <a href="#home" className="text-lg hover:text-gold transition-colors" onClick={() => { setIsMenuOpen(false); setShowAbout(false); }}>Home</a>
             <a href="#collections" className="text-lg hover:text-gold transition-colors" onClick={() => { setIsMenuOpen(false); setShowAbout(false); }}>Collections</a>
@@ -129,34 +131,21 @@ function App() {
                 <div className="absolute inset-0 bg-yellow-500/10 group-hover:bg-yellow-500/20 transition-colors duration-500"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-20 h-20 border-2 border-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
-                      <span className="text-3xl">👔</span>
-                    </div>
-                    <p className="text-gold tracking-wider text-sm">PREMIUM</p>
-                  </div>
-                </div>
-              </div>
-              <h4 className="text-2xl font-serif mb-3 group-hover:text-gold transition-colors">Wedding Sherwanis & Suits</h4>
-              <p className="text-gray-400 mb-4">Custom wedding sherwanis, Indo-western designer suits, royal Rajasthani groom wear. Best bridal fashion designers for men's wedding attire in Jaipur, Rajasthan.</p>
-              <a href="#contact" className="text-gold hover:underline inline-flex items-center">
-                Learn More <ArrowRight size={16} className="ml-2" />
-              </a>
-            </div>
-
-            <div className="collection-card group">
-              <div className="aspect-[3/4] bg-gradient-to-br from-gray-900 via-amber-950 to-gray-800 rounded-lg overflow-hidden mb-6 relative">
-                <div className="absolute inset-0 bg-yellow-500/10 group-hover:bg-yellow-500/20 transition-colors duration-500"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 border-2 border-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
-                      <span className="text-3xl">🤵</span>
+                    <div className="w-20 h-20 border-2 border-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500 overflow-hidden">
+                      <img
+                        src="https://raw.githubusercontent.com/Raghav-Luthra/spannickweb/main/src/formal%20wears.jpeg"
+                        alt="Formal wear"
+                        className="w-full h-full rounded-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </div>
                     <p className="text-gold tracking-wider text-sm">EXECUTIVE</p>
                   </div>
                 </div>
               </div>
               <h4 className="text-2xl font-serif mb-3 group-hover:text-gold transition-colors">Bespoke Formal Suits</h4>
-              <p className="text-gray-400 mb-4">Custom-tailored business suits, designer blazers, premium formal wear. Rajasthan's top menswear tailors for corporate and executive attire.</p>
+              <p className="text-gray-400 mb-4">Custom-tailored business suits, designer blazers, and premium formal wear. Rajasthan's top menswear tailors for corporate and executive attire.</p>
               <a href="#contact" className="text-gold hover:underline inline-flex items-center">
                 Learn More <ArrowRight size={16} className="ml-2" />
               </a>
@@ -167,15 +156,46 @@ function App() {
                 <div className="absolute inset-0 bg-yellow-500/10 group-hover:bg-yellow-500/20 transition-colors duration-500"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-20 h-20 border-2 border-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500">
-                      <span className="text-3xl">🕉️</span>
+                    <div className="w-20 h-20 border-2 border-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500 overflow-hidden">
+                      <img
+                        src="https://raw.githubusercontent.com/Raghav-Luthra/spannickweb/main/src/weading%20wear.jpeg"
+                        alt="Wedding wear"
+                        className="w-full h-full rounded-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <p className="text-gold tracking-wider text-sm">PREMIUM</p>
+                  </div>
+                </div>
+              </div>
+              <h4 className="text-2xl font-serif mb-3 group-hover:text-gold transition-colors">Wedding Sherwanis & Suits</h4>
+              <p className="text-gray-400 mb-4">Custom wedding sherwanis, Indo-western designer suits, and royal Rajasthani groom wear. Best bridal fashion designers for men's wedding attire in Jaipur, Rajasthan.</p>
+              <a href="#contact" className="text-gold hover:underline inline-flex items-center">
+                Learn More <ArrowRight size={16} className="ml-2" />
+              </a>
+            </div>
+
+            <div className="collection-card group">
+              <div className="aspect-[3/4] bg-gradient-to-br from-gray-900 via-amber-950 to-gray-800 rounded-lg overflow-hidden mb-6 relative">
+                <div className="absolute inset-0 bg-yellow-500/10 group-hover:bg-yellow-500/20 transition-colors duration-500"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-20 h-20 border-2 border-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500 overflow-hidden">
+                      <img
+                        src="https://raw.githubusercontent.com/Raghav-Luthra/spannickweb/main/src/ethenic%20wears.jpg.webp"
+                        alt="Ethnic wear"
+                        className="w-full h-full rounded-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </div>
                     <p className="text-gold tracking-wider text-sm">HERITAGE</p>
                   </div>
                 </div>
               </div>
               <h4 className="text-2xl font-serif mb-3 group-hover:text-gold transition-colors">Designer Ethnic Wear</h4>
-              <p className="text-gray-400 mb-4">Traditional kurtas, bandhgalas, Nehru jackets. Authentic Rajasthani ethnic menswear celebrating India's textile heritage and royal craftsmanship.</p>
+              <p className="text-gray-400 mb-4">Traditional kurtas, bandhgalas, and Nehru jackets. Authentic Rajasthani ethnic menswear celebrating India's textile heritage and royal craftsmanship.</p>
               <a href="#contact" className="text-gold hover:underline inline-flex items-center">
                 Learn More <ArrowRight size={16} className="ml-2" />
               </a>
@@ -219,142 +239,26 @@ function App() {
                   <p className="text-gray-400 text-sm">Happy Clients</p>
                 </div>
                 <div className="stat-card">
-                  <div className="text-3xl font-serif text-gold mb-2">100%</div>
-                  <p className="text-gray-400 text-sm">Custom Made</p>
+                  <div className="text-3xl font-serif text-gold mb-2">250+</div>
+                  <p className="text-gray-400 text-sm">Wedding Attires Created</p>
                 </div>
-              </div>
-
-              <GlowingButton onClick={() => setShowAbout(true)} variant="primary" className="group">
-                Read Our Story
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform inline-block" size={20} />
-              </GlowingButton>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 relative bg-gradient-to-b from-transparent via-gold/5 to-transparent">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center fade-in-up">
-            <h3 className="text-4xl md:text-5xl font-serif mb-6">Our Custom Tailoring Process</h3>
-            <p className="text-gray-300 mb-12">Premium bespoke menswear tailoring service from Rajasthan's best fashion designers. Personalized consultation, precision measurements, expert craftsmanship.</p>
-
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="process-step">
-                <div className="w-16 h-16 rounded-full bg-gold/10 border-2 border-gold flex items-center justify-center mx-auto mb-4 process-icon">
-                  <span className="text-gold font-serif text-2xl">1</span>
+                <div className="stat-card">
+                  <div className="text-3xl font-serif text-gold mb-2">30+</div>
+                  <p className="text-gray-400 text-sm">Years of Expertise</p>
                 </div>
-                <h4 className="text-lg font-serif mb-2">Personal Consultation</h4>
-                <p className="text-gray-400 text-sm">One-on-one style consultation at our Jaipur atelier. Understand your wedding, formal, or ethnic wear vision.</p>
-              </div>
-              <div className="process-step">
-                <div className="w-16 h-16 rounded-full bg-gold/10 border-2 border-gold flex items-center justify-center mx-auto mb-4 process-icon">
-                  <span className="text-gold font-serif text-2xl">2</span>
+                <div className="stat-card">
+                  <div className="text-3xl font-serif text-gold mb-2">5+</div>
+                  <p className="text-gray-400 text-sm">Design Awards</p>
                 </div>
-                <h4 className="text-lg font-serif mb-2">Precision Measurement</h4>
-                <p className="text-gray-400 text-sm">Expert body measurements ensuring perfect fit for custom sherwanis, suits, and ethnic menswear.</p>
-              </div>
-              <div className="process-step">
-                <div className="w-16 h-16 rounded-full bg-gold/10 border-2 border-gold flex items-center justify-center mx-auto mb-4 process-icon">
-                  <span className="text-gold font-serif text-2xl">3</span>
-                </div>
-                <h4 className="text-lg font-serif mb-2">Master Craftsmanship</h4>
-                <p className="text-gray-400 text-sm">Traditional Rajasthani tailoring techniques with premium fabrics. Hand-finished bespoke menswear.</p>
-              </div>
-              <div className="process-step">
-                <div className="w-16 h-16 rounded-full bg-gold/10 border-2 border-gold flex items-center justify-center mx-auto mb-4 process-icon">
-                  <span className="text-gold font-serif text-2xl">4</span>
-                </div>
-                <h4 className="text-lg font-serif mb-2">Perfect Delivery</h4>
-                <p className="text-gray-400 text-sm">Final fitting session with complimentary adjustments ensuring absolute perfection.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="py-24 relative">
-        <div className="absolute inset-0 bg-gradient-subtle"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16 fade-in-up">
-            <span className="text-gold text-sm tracking-[0.3em] uppercase">Contact Best Fashion Designers Rajasthan</span>
-            <h3 className="text-4xl md:text-5xl font-serif mt-4 mb-6">Visit Our Jaipur Atelier</h3>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Schedule your personalized consultation with Rajasthan's premier bespoke menswear designers.
-              Serving clients across Jaipur, Udaipur, Jodhpur, Delhi, Mumbai, and international destinations.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="contact-card group">
-              <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-colors">
-                <Phone className="text-gold" size={24} />
-              </div>
-              <h4 className="text-xl font-serif mb-2">Call Us</h4>
-              <p className="text-gray-400">+91 99295 73000</p>
-            </div>
-
-            <div className="contact-card group">
-              <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-colors">
-                <Mail className="text-gold" size={24} />
-              </div>
-              <h4 className="text-xl font-serif mb-2">Email Us</h4>
-              <p className="text-gray-400">spannickdesigners@gmail.com</p>
-              <p className="text-gray-400">raghavluthra555@gmail.com</p>
-            </div>
-
-            <div className="contact-card group">
-              <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold/20 transition-colors">
-                <MapPin className="text-gold" size={24} />
-              </div>
-              <h4 className="text-xl font-serif mb-2">Visit Our Atelier</h4>
-              <p className="text-gray-400">Jaipur, Rajasthan</p>
-              <p className="text-gray-400">India's Fashion Capital</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer className="py-12 border-t border-gray-800">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h4 className="text-2xl font-serif mb-2">
-                <span className="text-gold">SPANNICK</span> <span className="font-light">DESIGNERS</span>
-              </h4>
-              <p className="text-xs text-gray-400 tracking-widest mb-4">BY LUTHRA'S SINCE 1994</p>
-              <p className="text-gray-400 text-sm">
-                Best fashion designers from Rajasthan. Premium bespoke menswear tailors specializing in wedding sherwanis,
-                formal suits, and ethnic wear since 1994.
-              </p>
-            </div>
-
-            <div>
-              <h5 className="text-lg font-serif mb-4">Quick Links</h5>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li><a href="#home" className="hover:text-gold transition-colors">Home</a></li>
-                <li><a href="#collections" className="hover:text-gold transition-colors">Collections</a></li>
-                <li><a href="#about" className="hover:text-gold transition-colors">About</a></li>
-                <li><a href="#contact" className="hover:text-gold transition-colors">Contact</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="text-lg font-serif mb-4">Follow Us</h5>
-              <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center hover:bg-gold/20 transition-colors">
-                  <Facebook size={20} className="text-gold" />
-                </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center hover:bg-gold/20 transition-colors">
-                  <Instagram size={20} className="text-gold" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-            <p>&copy; 2024 Spannick Designers by Luthra's. All rights reserved.</p>
-          </div>
+      <footer className="py-12 bg-black text-white mt-12">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-sm">© 2023 Spannick Designers. All Rights Reserved.</p>
         </div>
       </footer>
     </div>
